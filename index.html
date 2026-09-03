@@ -8,40 +8,100 @@
   
   <title>Frontend Mentor | Results summary component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- STYLES -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <!-- PRECONNECT TO GOOGLE FONTS -->
+  <link 
+    rel="preconnect" 
+    href="https://fonts.googleapis.com"
+  >
+  <link 
+    rel="preconnect" 
+    href="https://fonts.gstatic.com" 
+    crossorigin
+  >
+  <!-- Load Google Fonts Hanken Grotesk -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap" 
+    rel="stylesheet"
+  >
+
   <style>
     .attribution { font-size: 0.6875rem; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
+  <!-- RESULTS -->
+  <main class="results">
 
-  Your Result
-  76
-  of 100
+    <!-- RESULT SECTION -->
+    <section class="result" aria-label="Your Result">
+      <h1 class="result__heading">Your Result</h1>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+      <!-- RESULT SCORE -->
+      <div class="result__score">
+        <strong>76</strong>
+        <span>of 100</span>
+      </div>
 
-  Reaction
-  80 / 100
+      <p class="result__feedback">Great</p>
+      <p class="result__description">
+        You scored higher than 65% of the people who have taken these tests.
+      </p>
+    </section>
 
-  Memory
-  92 / 100
+    <!-- SUMMARY SECTION -->
+    <section class="summary" aria-label="Summary">
+      <h2 class="summary__heading">Summary</h2>
 
-  Verbal
-  61 / 100
+      <!-- summary list -->
+      <dl class="summary__list">
 
-  Visual
-  72 / 100
+        <!-- REACTION -->
+        <div class="summary__item">
 
-  Continue
-  
+          <svg class="summary__icon" src="assets/images/icon-reaction.svg" alt="Reaction icon"></svg>
+          <dt class="summary__label">Reaction</dt>
+          <dd class="summary__score">80 / 100</dd>
+
+        </div>
+
+        <!-- MEMORY -->
+        <div class="summary__item">
+          <svg class="summary__icon" src="assets/images/icon-memory.svg" alt="Memory icon"></svg>
+          <dt class="summary__label">Memory</dt>
+          <dd class="summary__score">92 / 100</dd>
+        </div>
+
+        <!-- VERBAL -->
+        <div class="summary__item">
+          <svg class="summary__icon" src="assets/images/icon-verbal.svg" alt="Verbal icon"></svg>
+          <dt class="summary__label">Verbal</dt>
+          <dd class="summary__score">61 / 100</dd>
+        </div>
+
+        <!-- VISUAL -->
+        <div class="summary__item">
+          <svg class="summary__icon" src="assets/images/icon-visual.svg" alt="Visual icon"></svg>
+          <dt class="summary__label">Visual</dt>
+          <dd class="summary__score">72 / 100</dd>
+        </div>
+
+      </dl>
+
+      <button type="button">Continue</button>
+
+    </section>
+    
+  </main>
+
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </footer>
+
 </body>
 </html>
